@@ -35,12 +35,14 @@ export class SignIn extends Component {
         <form onSubmit={this.handleSubmit}>
           <FormInput
             name="email"
+            type="email"
             value={this.state.email}
             label="email"
             handleChange={this.handleChange}
             required />
           <FormInput
             name="password"
+            type="password"
             value={this.state.password}
             label="password"
             handleChange={this.handleChange}
@@ -55,4 +57,4 @@ export class SignIn extends Component {
   }
 }
 
-export default SignIn
+export default SignIn;
