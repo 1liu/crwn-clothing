@@ -28,7 +28,7 @@ const Header = ({ currentUser, hidden }) => {
         }
         <CartIcon />
       </div>
-      {hidden && <CardDropDown />}
+      {!hidden && <CardDropDown />}
     </div>
   )
 }
