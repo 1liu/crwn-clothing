@@ -1,6 +1,11 @@
 // user action types
 export const SET_CURRENT_USER = 'SET_CURRENT_USER'
-
+export const GOOGLE_SIGN_IN_START = 'GOOGLE_SIGN_IN_START'
+export const SIGN_IN_SUCCESS = 'SIGN_IN_SUCCESS'
+export const SIGN_IN_FAILURE = 'SIGN_IN_FAILURE'
+export const EMAIL_SIGN_IN_START = 'EMAIL_SIGN_IN_START'
+// export const EMAIL_SIGN_IN_SUCCESS = 'EMAIL_SIGN_IN_SUCCESS'
+// export const EMAIL_SIGN_IN_FAILURE = 'EMAIL_SIGN_IN_FAILURE'
 
 // cart action types
 export const TOOGLE_CART_HIDDEN = 'TOOGLE_CART_HIDDEN'
