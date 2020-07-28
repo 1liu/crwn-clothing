@@ -7,7 +7,10 @@ import {
   CHECK_USER_SESSION,
   SIGN_OUT_START,
   SIGN_OUT_SUCCESS,
-  SIGN_OUT_FAILURE
+  SIGN_OUT_FAILURE,
+  EMAIL_SIGN_UP_START,
+  EMAIL_SIGN_UP_SUCCESS,
+  EMAIL_SIGN_UP_FAILURE
   // EMAIL_SIGN_IN_SUCCESS,
   // EMAIL_SIGN_IN_FAILURE
 } from '../types'
@@ -71,5 +74,20 @@ export const signOutSuccess = () => ({
 
 export const signOutFailure = (error) => ({
   type: SIGN_OUT_FAILURE,
+  payload: error
+})
+
+export const emailSignUpStart = (emailAndPasswordAndDisplayName) => ({
+  type: EMAIL_SIGN_UP_START,
+  payload: emailAndPasswordAndDisplayName
+})
+
+export const emailSignUpSuccess = ({ user, additionalData }) => ({
+  type: EMAIL_SIGN_UP_SUCCESS,
+  payload: { user, additionalData }
+})
+
+export const emailSignUpFailure = (error) => ({
+  type: EMAIL_SIGN_UP_FAILURE,
   payload: error
 })

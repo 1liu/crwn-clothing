@@ -2,7 +2,8 @@ import {
   SIGN_IN_SUCCESS,
   SIGN_IN_FAILURE,
   SIGN_OUT_SUCCESS,
-  SIGN_OUT_FAILURE
+  SIGN_OUT_FAILURE,
+  EMAIL_SIGN_UP_FAILURE
   //GOOGLE_SIGN_IN_START,
   // EMAIL_SIGN_IN_FAILURE,
   // EMAIL_SIGN_IN_SUCCESS,
@@ -30,6 +31,7 @@ const userReducer = (state = INITIAL_STATE, action) => {
       }
     case SIGN_IN_FAILURE:
     case SIGN_OUT_FAILURE:
+    case EMAIL_SIGN_UP_FAILURE:
       return {
         ...state,
         error: action.payload
