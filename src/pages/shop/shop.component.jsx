@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { createStructuredSelector } from 'reselect'
+//import { createStructuredSelector } from 'reselect'
 import { Route } from 'react-router-dom'
 
-import CollectionOverview from '../../components/collections-overview/collections-overview.component'
-import CollectionPage from '../collection/collection.component'
+//import CollectionOverview from '../../components/collections-overview/collections-overview.component'
+//import CollectionPage from '../collection/collection.component'
 
 //import { firestore, convertCollectionsSnapshotToMap } from '../../firebase/firebase.utils'
 import { fetchCollectionStart } from '../../redux/shop/shop.actions'

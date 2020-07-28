@@ -1,7 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
-import { findAllByTitle } from '@testing-library/react';
+
 
 const config = {
   apiKey: "AIzaSyDK5WkJ7Y7kU3f611_ifqsorJfRrVS3d2M",
@@ -68,6 +68,15 @@ export const convertCollectionsSnapshotToMap = (collections) => {
     acc[cur.title.toLowerCase()] = cur;
     return acc;
   }, {});
+}
+
+export const getCurrentUser = ()=>{
+  return new Promise((resolve, reject)=>{
+    const unsubscribe = auth.onAuthStateChanged(userAuth=>{
+      unsubscribe();
+      resolve(userAuth);
+    }, reject)
+  })
 }
 
 firebase.initializeApp(config);
