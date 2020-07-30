@@ -1,5 +1,5 @@
 # CRWN Clothing
-A mobile responsive CRM solution for businesses who want to boost sales by concentrating on their customer base.
+A full stack e-commerce shop built for people who want to shop at home and stay safe during the global pandemic. 
 
 ### Live Demo
 
