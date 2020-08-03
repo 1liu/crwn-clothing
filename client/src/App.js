@@ -14,8 +14,8 @@ import CheckoutPage from './pages/checkout/checkout.component'
 import { selectCurrentUser } from './redux/user/user.selectors'
 import { checkUserSession } from './redux/user/user.actions'
 //import { selectCollectionsForPreview } from './redux/shop/shop.selectors'
-import './App.css';
-
+//import './App.css';
+import { GlobalStyle } from './global.styles'
 const App = ({ checkUserSession, currentUser }) => {
 
   //unsubscribeFromAuth = null;
@@ -51,18 +51,19 @@ const App = ({ checkUserSession, currentUser }) => {
   }, [checkUserSession]);
 
 
-    return (
-      <div className="">
-        <Header />
-        <Switch>
-          <Route exact path='/' component={HomePage} />
-          <Route path='/shop' component={ShopPage} />
-          <Route exact path='/signin' render={() => currentUser ? (<Redirect to='/' />) : (<SignInAndSignUpPage />)} />
-          <Route exact spath='/checkout' component={CheckoutPage} />
-        </Switch>
-      </div>
-    );
-  }
+  return (
+    <div className="">
+      <GlobalStyle />
+      <Header />
+      <Switch>
+        <Route exact path='/' component={HomePage} />
+        <Route path='/shop' component={ShopPage} />
+        <Route exact path='/signin' render={() => currentUser ? (<Redirect to='/' />) : (<SignInAndSignUpPage />)} />
+        <Route exact spath='/checkout' component={CheckoutPage} />
+      </Switch>
+    </div>
+  );
+}
 
 
 const mapStateToProps = createStructuredSelector({
